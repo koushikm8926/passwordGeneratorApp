@@ -19,7 +19,7 @@ const MyComponent = () => {
   const [lowercase,setLowerCase]= useState(true)
   const [uppercase,setUpperCase]= useState(false)
   const [symbols,setSymbols]= useState(false)
-
+  const [numbers,setNumbers]=useState(false);
 
   const generatePasswordString=(passwordLength:number)=>{
     //
@@ -39,7 +39,10 @@ const MyComponent = () => {
       characterList += symbols;
     }
     if(symbols){
-      characterList += symbols
+      characterList += symbols;
+    }
+    if(numbers){
+      characterList += numbers;
     }
     const passwordResult = createPassword(characterList,passwordLength)
     setPassword(passwordResult)
@@ -57,6 +60,13 @@ const MyComponent = () => {
   }
   const resetPasswordState=()=>{
     //
+    setPassword(" ");
+    setIsPassGenerated(false);
+    setLowerCase(true);
+    setSymbols(false);
+    setUpperCase(false);
+    setNumbers(false);
+
   }
 
   return (
