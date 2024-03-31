@@ -23,6 +23,27 @@ const MyComponent = () => {
 
   const generatePasswordString=(passwordLength:number)=>{
     //
+    let characterList = '';
+    const upperCaseChars="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const lowerCaseChars="abcdefghijklmnopqrstuvwxyz";
+    const digitChars= '01234567789';
+    const specialChars= "!@#$%^&*()_+";
+
+    if(uppercase){
+      characterList += uppercase;
+    }
+    if(lowercase){
+      characterList += lowercase;
+    }
+    if(symbols){
+      characterList += symbols;
+    }
+    if(symbols){
+      characterList += symbols
+    }
+    const passwordResult = createPassword(characterList,passwordLength)
+    setPassword(passwordResult)
+    setIsPassGenerated(true)
   }
 
   const createPassword=(character:string,passwordLength:number)=>{
