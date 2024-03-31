@@ -26,10 +26,16 @@ const MyComponent = () => {
   }
 
   const createPassword=(character:string,passwordLength:number)=>{
-
+    //
+    let result =''
+    for (let index = 1; index <passwordLength; index++) {
+     const characterIndex= Math.round(Math.random()*character.length)
+    result += character.charAt(characterIndex)
+    }
+    return result
   }
   const resetPasswordState=()=>{
-
+    //
   }
 
   return (
