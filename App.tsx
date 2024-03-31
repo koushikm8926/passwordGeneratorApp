@@ -1,5 +1,5 @@
 //import liraries
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import * as Yup from 'yup'
 
@@ -13,6 +13,25 @@ const passwordSchema= Yup.object().shape({
 
 // create a component
 const MyComponent = () => {
+
+  const [password,setPassword]= useState('')
+  const [isPassGenerated,setIsPassGenerated]=useState(false)
+  const [lowercase,setLowerCase]= useState(true)
+  const [uppercase,setUpperCase]= useState(false)
+  const [symbols,setSymbols]= useState(false)
+
+
+  const generatePasswordString=(passwordLength:number)=>{
+    //
+  }
+
+  const createPassword=(character:string,passwordLength:number)=>{
+
+  }
+  const resetPasswordState=()=>{
+
+  }
+
   return (
     <View style={styles.container}>
       <Text>MyComponent</Text>
