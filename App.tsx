@@ -30,19 +30,16 @@ const MyComponent = () => {
     const specialChars= "!@#$%^&*()_+";
 
     if(uppercase){
-      characterList += uppercase;
+      characterList += upperCaseChars;
     }
     if(lowercase){
-      characterList += lowercase;
+      characterList += lowerCaseChars;
     }
     if(symbols){
-      characterList += symbols;
-    }
-    if(symbols){
-      characterList += symbols;
+      characterList += specialChars;
     }
     if(numbers){
-      characterList += numbers;
+      characterList += digitChars;
     }
     const passwordResult = createPassword(characterList,passwordLength)
     setPassword(passwordResult)
@@ -71,7 +68,7 @@ const MyComponent = () => {
 
   return (
     <View style={styles.container}>
-      <Text>MyComponent</Text>
+      <Text>Password generator app</Text>
     </View>
   );
 };
